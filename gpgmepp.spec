@@ -5,22 +5,22 @@
 Summary:	GpgMEpp - C++ interface for GPGME library
 Summary(pl.UTF-8):	GpgMEpp - interfejs C++ do biblioteki GPGME
 Name:		gpgmepp
-Version:	2.0.0
+Version:	2.1.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	https://www.gnupg.org/ftp/gcrypt/gpgmepp/%{name}-%{version}.tar.xz
-# Source0-md5:	c27f2285fe9fac54b5d1ca22e00b4594
+# Source0-md5:	f3252524ba34c6a42455f30e226de1f5
 URL:		https://www.gnupg.org/related_software/gpgme/
 BuildRequires:	cmake >= 3.16
-BuildRequires:	gpgme-devel >= 1:2.0.0
+BuildRequires:	gpgme-devel >= 1:2.1.0
 BuildRequires:	libgpg-error-devel >= 1.47
 BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	gpgme >= 1:2.0.0
+Requires:	gpgme >= 1:2.1.0
 Requires:	libgpg-error >= 1.47
 Obsoletes:	gpgme-c++ < 1:2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,7 +38,7 @@ Summary:	Header files for GpgMEpp library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki GpgMEpp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gpgme-devel >= 1:2.0.0
+Requires:	gpgme-devel >= 1:2.1.0
 Requires:	libgpg-error-devel >= 1.47
 Requires:	libstdc++-devel >= 6:7
 Obsoletes:	gpgme-c++-devel < 1:2
@@ -89,12 +89,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/libgpgmepp.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libgpgmepp.so.7
+%{_libdir}/libgpgmepp.so.*.*.*
+%ghost %{_libdir}/libgpgmepp.so.7
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgpgmepp.so
+%{_libdir}/libgpgmepp.so
 %{_includedir}/gpgme++
 %{_libdir}/cmake/Gpgmepp
 %{_pkgconfigdir}/gpgmepp.pc
