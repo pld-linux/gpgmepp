@@ -13,15 +13,15 @@ Source0:	https://www.gnupg.org/ftp/gcrypt/gpgmepp/%{name}-%{version}.tar.xz
 # Source0-md5:	b0c6b3d699c39fc5e3b18ea523ff7ee6
 URL:		https://www.gnupg.org/related_software/gpgme/
 BuildRequires:	cmake >= 3.16
-BuildRequires:	gpgme-devel >= 1:2.1.0
+BuildRequires:	gpgme-devel >= 1:2.2.0
 BuildRequires:	libgpg-error-devel >= 1.47
 BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-Requires:	gpgme >= 1:2.1.0
-Requires:	libgpg-error >= 1.47
+Requires:	gpgme%{?_isa} >= 1:2.2.0
+Requires:	libgpg-error%{?_isa} >= 1.47
 Obsoletes:	gpgme-c++ < 1:2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,10 +37,10 @@ Made Easy) z projektu GnuPG. Jest oparty na bibliotece KF5gpgme.pp.
 Summary:	Header files for GpgMEpp library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki GpgMEpp
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-Requires:	gpgme-devel >= 1:2.1.0
-Requires:	libgpg-error-devel >= 1.47
-Requires:	libstdc++-devel >= 6:7
+Requires:	%{name}%{?_isa} = %{version}-%{release}
+Requires:	gpgme-devel%{?_isa} >= 1:2.2.0
+Requires:	libgpg-error-devel%{?_isa} >= 1.47
+Requires:	libstdc++-devel%{?_isa} >= 6:7
 Obsoletes:	gpgme-c++-devel < 1:2
 Conflicts:	kde4-kdepimlibs-devel
 
@@ -54,7 +54,7 @@ Pliki nagłówkowe biblioteki GpgMEpp.
 Summary:	Static GpgMEpp library
 Summary(pl.UTF-8):	Statyczna biblioteka GpgMEpp
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 Obsoletes:	gpgme-c++-static < 1:2
 
 %description static
