@@ -5,12 +5,12 @@
 Summary:	GpgMEpp - C++ interface for GPGME library
 Summary(pl.UTF-8):	GpgMEpp - interfejs C++ do biblioteki GPGME
 Name:		gpgmepp
-Version:	2.1.0
+Version:	2.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	https://www.gnupg.org/ftp/gcrypt/gpgmepp/%{name}-%{version}.tar.xz
-# Source0-md5:	f3252524ba34c6a42455f30e226de1f5
+# Source0-md5:	b0c6b3d699c39fc5e3b18ea523ff7ee6
 URL:		https://www.gnupg.org/related_software/gpgme/
 BuildRequires:	cmake >= 3.16
 BuildRequires:	gpgme-devel >= 1:2.1.0
